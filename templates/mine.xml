@@ -1,0 +1,26 @@
+<templateSet group="mine">
+  <template name="date" value="&quot;$date$&quot;" description="generate date string in dd-mm-yyyy format" toReformat="false" toShortenFQNames="true">
+    <variable name="date" expression="date(&quot;dd-MM-yyyy&quot;)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="psv" value="public static void" description="public static void" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="fore" value="for($Object$ $element$ : $list$){&#10;    $body$&#10;}" description="for each loop" toReformat="false" toShortenFQNames="true">
+    <variable name="Object" expression="" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <variable name="element" expression="" defaultValue="&quot;element&quot;" alwaysStopAt="true" />
+    <variable name="list" expression="suggestVariableName()" defaultValue="&quot;list&quot;" alwaysStopAt="true" />
+    <variable name="body" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_STRING" value="false" />
+    </context>
+  </template>
+</templateSet>
